@@ -3,7 +3,8 @@ package oop_120741_clerensiacatherine.week02
 class Student (
     val name: String,
     val nim: String,
-    val major: String
+    val major: String,
+    var gpa: Double = 0.0,
 ){
     init {
         //Validasi Sederhana: Cek panjang NIM
