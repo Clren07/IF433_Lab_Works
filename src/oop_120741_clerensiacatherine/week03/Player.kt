@@ -17,8 +17,19 @@ class Player (val username: String){
 
             if(after>before) {
                 println("Level Up! Selamat $username naik level $level")
+            } else {
+                println ("Sekarang $username ada di level $level")
             }
 
         }
     }
 }
+
+fun main(){
+    val p = Player("Miya")
+    p.addXp(50)
+    p.addXp(60)
+    p.addXp(-10)
+    p.addXp(1000)
+}
+
