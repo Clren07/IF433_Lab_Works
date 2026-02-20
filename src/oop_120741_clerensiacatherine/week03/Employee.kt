@@ -19,7 +19,7 @@ class Employee (val name: String) {
 
     fun increasePerformanceRating() {
         performanceRating++
-        println("Kinerja $name meningkat! Rating: $performanceRating)
+        println("Kinerja $name meningkat! Rating: $performanceRating")
     }
 
     //Kita tidak bbuat getter untuk performanceRating, jadi data ini benar-benar rahasia
@@ -28,5 +28,8 @@ class Employee (val name: String) {
     fun printStatus() {
         println("Karyawan $name, Rating: $performanceRating")
     }
+
+    val tax: Double
+        get() = salary * 0.1
 
 }
