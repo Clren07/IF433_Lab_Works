@@ -5,25 +5,21 @@ class Employee (val name: String) {
         set (value) {
             if (value < 0) {
                 println("Error: Gaji tidak boleh negatif! Diset ke 0.")
-                field = 0 //Gunakan field, bukan this.salary
+                field = 0
             } else {
                 println("Mencoba set gaji ke: $value")
-                field = value //Gunakan field untuk assign nilai asli
+                field = value
             }
 
 
         }
 
-    //Hanya bisa diakss di file/class ini saja
     private var performanceRating: Int = 3
 
     fun increasePerformanceRating() {
         performanceRating++
         println("Kinerja $name meningkat! Rating: $performanceRating")
     }
-
-    //Kita tidak bbuat getter untuk performanceRating, jadi data ini benar-benar rahasia
-    //Kecuali kita membuat function khusus untuk print.
 
     fun printStatus() {
         println("Karyawan $name, Rating: $performanceRating")
