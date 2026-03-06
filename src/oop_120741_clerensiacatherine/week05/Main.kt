@@ -28,4 +28,13 @@ fun main(){
     println(math.hitungLuas(4))        // persegi
     println(math.hitungLuas(5,3))      // persegi panjang
     println(math.hitungLuas(7.0))
+
+    //Task 2
+    val EWallet = EWallet("Clerensia", 50000.0)
+    val creditCard = CreditCard("Clerensia", 100000.0)
+    val paymentMethod : List<PaymentMethod> = listOf(EWallet, creditCard)
+
+    for (paymentMethod in paymentMethod){
+        paymentMethod.processPayment(75000.0)
+    }
 }
