@@ -23,5 +23,9 @@ fun main(){
     println("--------------------")
     }
 
-
+    //Task 1
+    val math = MathHelper()
+    println(math.hitungLuas(4))        // persegi
+    println(math.hitungLuas(5,3))      // persegi panjang
+    println(math.hitungLuas(7.0))
 }
