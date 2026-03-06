@@ -21,12 +21,12 @@ fun main () {
     println("\n --- Manager ---")
     val myManager = Manager ("Sofia", 10000000)
     myManager.work()
-    println("Bonus Developer: Rp ${myManager.calculateBonus()}")
+    println("Bonus Manager: Rp ${myManager.calculateBonus()}")
 
     println("\n --- Developer ---")
     val myDeveloper = Developer ("Hansen", 8000000, "JavaScript")
     myDeveloper.work()
-    println("Bonus Manager: Rp ${myDeveloper.calculateBonus()}")
+    println("Bonus Developer: Rp ${myDeveloper.calculateBonus()}")
 
 }
 
