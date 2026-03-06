@@ -36,5 +36,12 @@ fun main(){
 
     for (paymentMethod in paymentMethod){
         paymentMethod.processPayment(75000.0)
+        if (paymentMethod is EWallet){
+            EWallet.topUp(50000)
+            paymentMethod.processPayment(75000.0)
+        }
+        if (paymentMethod is CreditCard){
+            creditCard.processPayment(75000.0)
+        }
     }
 }
