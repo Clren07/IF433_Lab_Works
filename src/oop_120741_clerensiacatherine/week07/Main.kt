@@ -37,9 +37,20 @@ fun main(){
     }
     println(uiMessage)
 
-    println("=== Test Singleton Game Manager ===")
+    println("\n=== Test Singleton Game Manager ===")
     GameManager.startGame()
     GameManager.startGame()
+
+    println("\n=== Test Rarity ===")
+    println("Drop chance LEGENDARY: ${ItemRarity.LEGENDARY.dropChance}")
+
+    println("\n=== Test Weapon Factory ===")
+    val starterWeapon = Weapon.forgeStarterSword()
+
+    println("Senjata: ${starterWeapon.items.name}")
+    println("Damage: ${starterWeapon.items.damage}")
+    println("Rarity: ${starterWeapon.items.rarity}")
+    println("Durability: ${starterWeapon.durability}")
 
 }
 
