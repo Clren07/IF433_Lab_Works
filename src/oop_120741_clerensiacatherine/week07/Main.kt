@@ -37,5 +37,9 @@ fun main(){
     }
     println(uiMessage)
 
+    println("=== Test Singleton Game Manager ===")
+    GameManager.startGame()
+    GameManager.startGame()
+
 }
 
