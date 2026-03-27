@@ -52,5 +52,16 @@ fun main(){
     println("Rarity: ${starterWeapon.items.rarity}")
     println("Durability: ${starterWeapon.durability}")
 
+    println("\n=== Upgrade Senjata ===")
+    val upgradedItem = starterWeapon.items.copy(
+        name = "Pedang Kayu +1",
+        damage = 15
+    )
+
+    println("Senjata baru: ${upgradedItem.name}, Damage: ${upgradedItem.damage}")
+
+    println("\n=== Test Event ===")
+    processEvent(BattleState.LootDropped(upgradedItem))
+
 }
 

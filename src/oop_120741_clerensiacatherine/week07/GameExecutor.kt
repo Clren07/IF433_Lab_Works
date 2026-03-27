@@ -1,7 +1,6 @@
 package oop_120741_clerensiacatherine.week07
 
-class GameExecutor (){
-    fun processEvent(event: BattleState) {
+fun processEvent(event: BattleState) {
         when (event) {
             is BattleState.MonsterEncounter -> {
                 println("Monster muncul: ${event.monsterName}")
@@ -20,4 +19,4 @@ class GameExecutor (){
             }
         }
     }
-}
+
