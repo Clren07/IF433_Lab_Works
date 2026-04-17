@@ -28,12 +28,16 @@ class ApiParser {
     }
 
     fun checkout(product: Product) {
+        // Ambil ID dari sealed class pakai when
         val id = when (product) {
             is Electronic -> product.id
             is Clothing -> product.id
         }
 
-        val trx = JavaPaymentService.processPayment(id)!!
-        println("Transaction Success: $trx")
+        // Panggil Java service
+        val transactionId = JavaPaymentService.processPayment(id)!!
+
+        // Print hasil transaksi
+        println("Transaction ID: $transactionId")
     }
 }
