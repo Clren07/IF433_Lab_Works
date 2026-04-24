@@ -23,4 +23,11 @@ fun main (){
         println("${it.pair} | ${it.position} | +${it.roe}%")
     }
 
+    println("\n=== HOF: FILTER (LOSING TRADES) ===")
+    val losingTrades = closedTrades.filter { it.roe <= 0 }
+    println("Hasil LOSING TRADES:")
+    losingTrades.forEach {
+        println("${it.pair} | ${it.position} | ${it.roe}%")
+    }
+
 }
