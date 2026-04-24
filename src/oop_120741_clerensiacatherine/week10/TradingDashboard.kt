@@ -61,4 +61,10 @@ fun main (){
         println(it)
     }
 
+    println("\n=== CRYPTO TRADING DASHBOARD ===")
+    topPerformersString.forEach {
+        println(it)
+    }
+
+
 }
