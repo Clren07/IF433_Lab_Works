@@ -52,6 +52,13 @@ fun main (){
         println(it)
     }
 
-
+    println("\n=== HOF: MAP + TOSET (UNIQUE PAIRS) ===")
+    val uniquePairs = tradeHistory
+        .map { it.pair }
+        .toSet()
+    println("Hasil UNIQUE PAIRS:")
+    uniquePairs.forEach {
+        println(it)
+    }
 
 }
