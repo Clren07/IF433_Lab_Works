@@ -66,5 +66,13 @@ fun main (){
         println(it)
     }
 
+    println("\n=== WORST PERFORMERS ===")
+    worstPerformersString.forEach {
+        println(it)
+    }
 
+    println("\n=== TRADED PAIRS ===")
+    uniquePairs.forEach {
+        println(it)
+    }
 }
