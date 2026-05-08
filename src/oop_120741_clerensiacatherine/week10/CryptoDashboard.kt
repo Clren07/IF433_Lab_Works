@@ -8,4 +8,12 @@ fun main() {
     coinRepo.add(Coin("USDT", 5000.0))
 
     val response = ApiResponse("200 OK", coinRepo.getAll())
+
+    // Tampilkan Dashboard Coin
+    println("Status Response: ${response.status}")
+    println("=== Coin Wallet Dashboard ===")
+
+    response.data.forEach { coin ->
+        println("Coin: ${coin.name}, Balance: ${coin.balance}")
+    }
 }
