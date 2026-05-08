@@ -1,4 +1,4 @@
-package oop_120741_clerensiacatherine.week10
+package oop_120741_clerensiacatherine.week9
 
 data class Student(val name: String, val gpa: Double)
 fun main (){

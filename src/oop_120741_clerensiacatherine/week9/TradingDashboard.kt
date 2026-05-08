@@ -1,4 +1,4 @@
-package oop_120741_clerensiacatherine.week10
+package oop_120741_clerensiacatherine.week9
 
 fun main (){
     val tradeHistory = listOf(

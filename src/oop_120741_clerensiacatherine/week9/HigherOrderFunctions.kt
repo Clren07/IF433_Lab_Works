@@ -1,4 +1,4 @@
-package oop_120741_clerensiacatherine.week10
+package oop_120741_clerensiacatherine.week9
 
 fun main (){
     val numbers = listOf(1,2,3,4,5,6,7,8)
