@@ -27,6 +27,7 @@ fun main() {
 
     var currentKibbleStock = 50
 
+    // Jadwal makan pagi
     try {
 
         currentKibbleStock = dispenseKibble(
@@ -50,5 +51,15 @@ fun main() {
     } finally {
 
         println("Siklus pengecekan dispenser pagi selesai.")
+    }
+
+    // Jadwal makan sore
+    runCatching {
+
+        dispenseKibble(
+            requestedGram = 30,
+            availableGram = 1000,
+            isJammed = false
+        )
     }
 }
