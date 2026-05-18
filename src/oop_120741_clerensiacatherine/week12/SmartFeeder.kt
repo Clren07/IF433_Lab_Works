@@ -10,17 +10,21 @@ fun dispenseKibble(
         "Porsi kibble harus lebih dari 0 gr"
     }
 
-    // Validasi hardware dispenser
     if (isJammed) {
         throw DispenserJamException()
     }
 
-    // Validasi stok makanan
     if (requestedGram > availableGram) {
         throw FoodEmptyException(requestedGram, availableGram)
     }
+
     println("Kibble berhasil dikeluarkan!")
 
-
     return availableGram - requestedGram
+}
+
+fun main() {
+
+    var currentKibbleStock = 50
+
 }
