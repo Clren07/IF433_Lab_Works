@@ -10,5 +10,10 @@ fun dispenseKibble(
         "Porsi kibble harus lebih dari 0 gr"
     }
 
+    // Validasi hardware dispenser
+    if (isJammed) {
+        throw DispenserJamException()
+    }
+
     return availableGram - requestedGram
 }
