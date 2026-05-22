@@ -1,10 +1,11 @@
 package oop_120741_clerensiacatherine.week13
+import java.io.File
 
 fun main() {
     println("=== TEST UNSAFE RESOURCE HANDLING ===")
-    val unsafeFile = File(pathname = "unsafe_logs.txt")
+    val unsafeFile = File ("unsafe_logs.txt")
     // Membuka stream secara manual
-    val writer = unsafeFile.printlnWriter()
+    val writer = unsafeFile.printWriter()
 
     writer.println("Log 1: Membuka koneksi database...")
     writer.println("Log 2: Menulis data pengguna...")
@@ -21,7 +22,7 @@ fun main() {
     val safeFile = File("safe_logs.txt")
 
     // Writer akan OTOMATIS di-close saat keluar dari blok kurawal pembungkusnya
-    safeFile.printlnWriter().use { out ->
+    safeFile.printWriter().use { out ->
         for (i in 1..100) {
             out.println("Safe Log entry #$i: System status OK.")
         }
