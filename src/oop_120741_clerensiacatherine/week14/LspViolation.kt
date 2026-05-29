@@ -12,3 +12,7 @@ class Square : Rectangle() {
     override var height: Int = 0
         set(value) { field = value; super.width = value }
 }
+
+interface Shape {
+    fun area(): Int
+}
